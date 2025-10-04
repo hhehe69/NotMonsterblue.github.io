@@ -1,367 +1,56 @@
 <!doctype html>
-<!--
-  NotMonsterblue - Portfolio (Single-file site)
-  - Multi-section single-page app (Home / Projects / Shop / Contact)
-  - Theme settings (light / dark + accent color presets)
-  - Smooth animations, flat clean design, sleek fonts
-
-  IMPORTANT: Replace the Roblox profile link at CONTACT section:
-    href="https://www.roblox.com/users/REPLACE_WITH_YOUR_ID/profile"
-  with your real profile URL (use your numeric user id), or leave as-is and visitors can search your username.
--->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NotMonsterblue — Roblox Scripter</title>
-
-  <!-- Google font (sleek, modern) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg: #f7f8fb;
-      --panel: #ffffff;
-      --muted: #6b7280;
-      --text: #0f172a;
-      --accent: #6b9cff;
-      --glass: rgba(255,255,255,0.55);
-      --radius: 14px;
-      --shadow: 0 6px 20px rgba(17,24,39,0.06);
-      --nav-height: 72px;
-      --container: 1100px;
-    }
-    [data-theme='dark']{
-      --bg: #0b1020;
-      --panel: #0f1724;
-      --muted: #9aa4b2;
-      --text: #e6eef8;
-      --accent: #7dd3fc;
-      --glass: rgba(255,255,255,0.02);
-      --shadow: 0 8px 30px rgba(2,6,23,0.6);
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:var(--text);background:linear-gradient(180deg,var(--bg),transparent);-webkit-font-smoothing:antialiased}
-
-    .wrap{max-width:var(--container);margin:0 auto;padding:24px}
-
-    /* NAV */
-    header{height:var(--nav-height);display:flex;align-items:center;position:sticky;top:12px;z-index:40}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;background:transparent}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5b7cff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:var(--shadow)}
-    .navlinks{display:flex;gap:16px;align-items:center}
-    .navlinks a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:600;transition:all .18s}
-    .navlinks a.active, .navlinks a:hover{color:var(--text);background:var(--panel);box-shadow:var(--shadow)}
-
-    .cta{display:flex;gap:8px;align-items:center}
-    .btn{padding:10px 14px;border-radius:10px;background:var(--accent);color:var(--panel);font-weight:700;text-decoration:none;box-shadow:var(--shadow);border:none;cursor:pointer}
-    .ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--text)}
-
-    main{padding:28px 0}
-
-    /* HERO */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-    .card{background:var(--panel);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
-    .hero h1{font-size:34px;margin:0 0 8px}
-    .tag{color:var(--muted);margin-bottom:16px}
-
-    .profile-meta{display:flex;gap:14px;align-items:center}
-    .avatar{width:84px;height:84px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#5b7cff);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px}
-
-    .small{font-size:13px;color:var(--muted)}
-
-    /* Projects grid */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .project{overflow:hidden;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px}
-    .project .thumb{height:140px;border-radius:10px;background:linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.01));display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--muted)}
-    .project h3{margin:0;font-size:16px}
-    .project p{margin:0;color:var(--muted);font-size:13px}
-
-    /* SHOP */
-    .shop-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-    .shop-item{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:12px}
-
-    /* CONTACT */
-    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
-    .contact-card{padding:18px;border-radius:12px}
-
-    /* footer */
-    footer{margin:34px 0 12px;color:var(--muted);font-size:13px}
-
-    /* small screens */
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr;}
-      .contact-grid{grid-template-columns:1fr}
-      header{top:0}
-    }
-
-    /* subtle animations */
-    .fade-up{opacity:0;transform:translateY(8px);transition:opacity .5s ease, transform .5s ease}
-    .in{opacity:1;transform:translateY(0)}
-
-    /* settings */
-    .settings{display:flex;gap:12px;align-items:center}
-    .color-swatch{width:34px;height:34px;border-radius:8px;border:2px solid rgba(255,255,255,0.06);cursor:pointer}
-    .muted-small{font-size:13px;color:var(--muted)}
-
-    .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
-  </style>
+  <title>NotMonsterblue.Profilo — Home</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/firebase.js"></script>
 </head>
-<body data-theme="light">
-  <div class="wrap">
-    <header>
-      <nav class="nav" style="width:100%">
-        <div class="brand">
-          <div class="logo">N</div>
-          <div>
-            <div style="font-weight:700">NotMonsterblue</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:2px">Roblox Scripter & Game Dev</div>
-          </div>
-        </div>
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="brand"><a href="/">NotMonsterblue.Profilo</a></div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" id="authLink">Login</a>
+    </nav>
+    <div class="theme-toggle" id="themeToggle">Toggle Theme</div>
+  </header>
 
-        <div class="navlinks" id="navlinks">
-          <a href="#home" data-target="home" class="active">Home</a>
-          <a href="#projects" data-target="projects">Projects</a>
-          <a href="#shop" data-target="shop">Shop</a>
-          <a href="#contact" data-target="contact">Contact</a>
-        </div>
+  <main class="container">
+    <section class="hero card">
+      <h1>NotMonsterblue</h1>
+      <p class="lead">Roblox scripter — I build gameplay systems, abilities, and core mechanics.</p>
+      <p>Available weekends. Check Projects to see demos and hire me in Shop.</p>
+      <div class="cta">
+        <a class="btn" href="projects.html">View Projects</a>
+        <a class="btn ghost" href="contact.html">Contact</a>
+      </div>
+    </section>
 
-        <div class="cta">
-          <div class="settings small muted-small" style="align-items:center">
-            <div class="muted-small" style="margin-right:8px">Theme</div>
-            <button class="btn ghost" id="themeToggle">Dark</button>
-            <div style="width:12px"></div>
-            <div class="color-swatch" id="accentPicker" title="Change accent color" style="background:var(--accent)"></div>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <section class="features">
+      <div class="card small">
+        <h3>Skills</h3>
+        <p>Lua · Roblox Studio · Gameplay systems · Data saving · Team collaboration</p>
+      </div>
+      <div class="card small">
+        <h3>Availability</h3>
+        <p>Weekends only. Reliable and communicative on Discord.</p>
+      </div>
+      <div class="card small">
+        <h3>Demo</h3>
+        <p>Create a demo place showing one system (rounds, pets, ability). I help embed it.</p>
+      </div>
+    </section>
+  </main>
 
-    <main>
-      <!-- HOME -->
-      <section id="home" class="fade-up in">
-        <div class="hero">
-          <div>
-            <div class="card">
-              <div class="profile-meta">
-                <div class="avatar">N</div>
-                <div>
-                  <h1>NotMonsterblue</h1>
-                  <div class="tag">Roblox Scripter — I build gameplay systems, abilities, and core mechanics.</div>
-                  <div style="display:flex;gap:8px;margin-top:12px">
-                    <a class="btn" href="#projects">View My Work</a>
-                    <a class="btn ghost" href="#contact">Contact</a>
-                  </div>
-                </div>
-              </div>
-
-              <div style="margin-top:16px" class="small">Available weekends for support scripting. Rates and commissions listed in Shop.</div>
-            </div>
-
-            <div style="display:flex;gap:12px;margin-top:16px">
-              <div class="card" style="flex:1">
-                <h3 style="margin-bottom:6px">Skills</h3>
-                <div class="small">Lua / Roblox Studio · Gameplay scripting · Systems & mechanics · Data saving · Team collaboration</div>
-              </div>
-
-              <div class="card" style="width:220px">
-                <h3 style="margin-bottom:6px">Availability</h3>
-                <div class="small">Weekends only — reliable & responsive on Discord during work windows.</div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="card">
-              <h3>Quick Portfolio</h3>
-              <div style="margin-top:12px">
-                <div class="small">You currently have no public examples. Add demo links here so owners can preview your work.</div>
-                <div style="margin-top:12px;display:flex;gap:8px">
-                  <a class="btn ghost" id="makeDemo">Create Demo Place</a>
-                  <a class="btn" id="offerTrial">Offer Trial Task</a>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-top:14px" class="card small">
-              Tip: A single demo showing an auto-spawn pet, round system, or an ability is enough to prove scripting ability.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" style="margin-top:22px" class="fade-up">
-        <div class="topbar">
-          <h2 style="margin:0">Projects</h2>
-          <div class="muted-small">Showcases of scripting work — click an item to view details.</div>
-        </div>
-
-        <div class="grid" id="projectsGrid">
-          <!-- sample placeholder projects -->
-          <div class="project card" data-type="rounds">
-            <div class="thumb">Round System</div>
-            <h3>Round & Intermission System</h3>
-            <p>Freezeframe countdown (3..2..1..GO!), intermission logic, team checks and round timer.</p>
-            <div style="margin-top:auto;display:flex;gap:8px"><a class="btn ghost" href="#" onclick="openProject('Round & Intermission System')">View</a></div>
-          </div>
-
-          <div class="project card">
-            <div class="thumb">Pet</div>
-            <h3>Pet Auto-spawn & Inventory</h3>
-            <p>Auto-spawn equipped pet, hunger levels, basic inventory UI and data saving.</p>
-            <div style="margin-top:auto;display:flex;gap:8px"><a class="btn ghost" href="#" onclick="openProject('Pet Auto-spawn')">View</a></div>
-          </div>
-
-          <div class="project card">
-            <div class="thumb">Ability</div>
-            <h3>Ability / Skill System</h3>
-            <p>Cooldowns, activation checks, and effect application for player abilities.</p>
-            <div style="margin-top:auto;display:flex;gap:8px"><a class="btn ghost" href="#" onclick="openProject('Ability System')">View</a></div>
-          </div>
-
-          <div class="project card">
-            <div class="thumb">Save</div>
-            <h3>Data Saving & Profile</h3>
-            <p>Profile-based saving using DataStore (or ProfileService), with safe fallbacks and versioning.</p>
-            <div style="margin-top:auto;display:flex;gap:8px"><a class="btn ghost" href="#" onclick="openProject('Data Saving')">View</a></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SHOP -->
-      <section id="shop" style="margin-top:22px" class="fade-up">
-        <div class="topbar">
-          <h2 style="margin:0">Shop</h2>
-          <div class="muted-small">Services & rates (Robux). Adjust prices as you see fit.</div>
-        </div>
-
-        <div class="shop-list">
-          <div class="shop-item card">
-            <h3>Weekend Support (basic)</h3>
-            <div class="small">Small fixes, short features — per weekend</div>
-            <div style="font-weight:800;margin-top:8px">300 Robux</div>
-            <div style="margin-top:12px;display:flex;gap:8px"><a class="btn" href="#contact">Hire</a></div>
-          </div>
-
-          <div class="shop-item card">
-            <h3>Feature / System</h3>
-            <div class="small">More complex systems (negotiable)</div>
-            <div style="font-weight:800;margin-top:8px">Custom Quote</div>
-            <div style="margin-top:12px;display:flex;gap:8px"><a class="btn" href="#contact">Request Quote</a></div>
-          </div>
-
-          <div class="shop-item card">
-            <h3>Trial Task</h3>
-            <div class="small">One small task to show skills (paid)</div>
-            <div style="font-weight:800;margin-top:8px">150 Robux (example)</div>
-            <div style="margin-top:12px;display:flex;gap:8px"><a class="btn" href="#contact">Offer Trial</a></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" style="margin-top:22px" class="fade-up">
-        <div class="topbar">
-          <h2 style="margin:0">Contact</h2>
-          <div class="muted-small">How owners can reach you.</div>
-        </div>
-
-        <div class="contact-grid">
-          <div class="card contact-card">
-            <h3>Get in touch</h3>
-            <p class="small">Prefer Discord for work coordination and quick updates. Replace the contact handle below with your real Discord or email.</p>
-            <div style="margin-top:12px;display:flex;flex-direction:column;gap:10px">
-              <div class="small"><strong>Roblox:</strong> <a href="https://www.roblox.com/users/REPLACE_WITH_YOUR_ID/profile" target="_blank">NotMonsterblue (replace ID)</a></div>
-              <div class="small"><strong>Discord:</strong> YourDiscord#0000</div>
-              <div class="small"><strong>Email:</strong> your.email@example.com</div>
-              <div style="margin-top:12px"><a class="btn" href="mailto:your.email@example.com">Email Me</a></div>
-            </div>
-          </div>
-
-          <div class="card contact-card">
-            <h3>Availability</h3>
-            <p class="small">Weekends only. I accept paid trial tasks and short weekend support.</p>
-
-            <div style="margin-top:12px">
-              <div class="small">Quick booking:</div>
-              <input id="bookName" placeholder="Owner / Project" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);margin-top:8px" />
-              <button class="btn" style="margin-top:10px" onclick="book()">Request Booking</button>
-              <div id="bookingMsg" style="margin-top:8px;color:var(--muted);font-size:13px"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <div class="small">© NotMonsterblue — Roblox scripter. Built for demo & portfolio. Customize content and replace placeholders before publishing.</div>
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    // --- Router nav highlight
-    const links = document.querySelectorAll('.navlinks a');
-    function setActive(hash){
-      links.forEach(a=>a.classList.toggle('active', a.getAttribute('href')===hash));
-    }
-    window.addEventListener('hashchange', ()=> setActive(location.hash || '#home'));
-    setActive(location.hash || '#home');
-
-    // --- fade in on load
-    document.querySelectorAll('.fade-up').forEach((el,i)=>{setTimeout(()=>el.classList.add('in'), 80*i)});
-
-    // --- theme toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-    function setTheme(name){
-      body.setAttribute('data-theme', name);
-      themeToggle.textContent = name === 'dark' ? 'Light' : 'Dark';
-    }
-    // persistent
-    const saved = localStorage.getItem('nm_theme') || 'light';
-    setTheme(saved);
-    themeToggle.addEventListener('click', ()=>{
-      const next = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      setTheme(next);localStorage.setItem('nm_theme', next);
-    });
-
-    // accent color picker (simple presets)
-    const accentPicker = document.getElementById('accentPicker');
-    const presets = ['#6b9cff','#7dd3fc','#f472b6','#fbbf24','#34d399'];
-    accentPicker.addEventListener('click', ()=>{
-      const next = presets[Math.floor(Math.random()*presets.length)];
-      document.documentElement.style.setProperty('--accent', next);
-      accentPicker.style.background = next;
-      localStorage.setItem('nm_accent', next);
-    });
-    const savedAccent = localStorage.getItem('nm_accent');
-    if(savedAccent){document.documentElement.style.setProperty('--accent', savedAccent);accentPicker.style.background = savedAccent}
-
-    // project viewer (simple)
-    function openProject(name){
-      alert(name + "\n\nIf you want, I can help you attach a short demo video or link to a Roblox place here.");
-    }
-
-    // demo buttons — convenience placeholders
-    document.getElementById('makeDemo').addEventListener('click', ()=>{
-      alert('Tip: Make a Roblox "Demo Place" with one working script (e.g., round system) and paste the place link into the Projects section of this site. I can help automate that.')
-    });
-    document.getElementById('offerTrial').addEventListener('click', ()=>{
-      location.hash = '#contact';
-      document.getElementById('bookName').value = 'Trial task request';
-    });
-
-    // simple booking
-    function book(){
-      const v = document.getElementById('bookName').value.trim();
-      const msg = document.getElementById('bookingMsg');
-      if(!v){msg.textContent = 'Write the project or owner name first.';return}
-      msg.textContent = 'Request sent (local demo): ' + v + '. Replace this with a real contact flow when publishing.';
-    }
-
-  </script>
+  <footer class="site-footer">
+    <div>© NotMonsterblue — Roblox scripter. Hosted on GitHub Pages.</div>
+    <div class="muted">Replace placeholders (Discord, email, Firebase config) before publishing.</div>
+  </footer>
 </body>
 </html>

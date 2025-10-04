@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NotMonsterblue.Profilo — Login</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/firebase.js"></script>
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="brand"><a href="/">NotMonsterblue.Profilo</a></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="active">Login</a>
+    </nav>
+    <div class="theme-toggle" id="themeToggle5">Toggle Theme</div>
+  </header>
+
+  <main class="container">
+    <section class="card auth-card">
+      <h2>Sign in / Sign up</h2>
+      <div class="auth-forms">
+        <div class="form">
+          <h3>Sign up</h3>
+          <input id="suEmail" placeholder="Email" type="email" />
+          <input id="suPassword" placeholder="Password" type="password" />
+          <button class="btn" id="signupBtn">Create account</button>
+        </div>
+        <div class="form">
+          <h3>Sign in</h3>
+          <input id="siEmail" placeholder="Email" type="email" />
+          <input id="siPassword" placeholder="Password" type="password" />
+          <button class="btn" id="signinBtn">Sign in</button>
+        </div>
+      </div>
+
+      <div id="authStatus" class="muted"></div>
+      <div id="signOutWrap" style="display:none">
+        <button class="btn ghost" id="signOutBtn">Sign out</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© NotMonsterblue — Auth</div>
+  </footer>
+</body>
+</html>

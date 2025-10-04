@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NotMonsterblue.Profilo — Projects</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/firebase.js"></script>
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="brand"><a href="/">NotMonsterblue.Profilo</a></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" id="authLink">Login</a>
+    </nav>
+    <div class="theme-toggle" id="themeToggle2">Toggle Theme</div>
+  </header>
+
+  <main class="container">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <article class="project card">
+        <div class="thumb">Round System</div>
+        <h3>Round & Intermission</h3>
+        <p>Freeze countdown, intermission, and team checks.</p>
+      </article>
+      <article class="project card">
+        <div class="thumb">Pet</div>
+        <h3>Pet Auto-spawn</h3>
+        <p>Auto-spawn equipped pet, hunger, and data saving.</p>
+      </article>
+      <article class="project card">
+        <div class="thumb">Ability</div>
+        <h3>Ability System</h3>
+        <p>Cooldowns, activation checks, and effects.</p>
+      </article>
+    </div>
+
+    <section class="comments card" id="commentsSection">
+      <h3>Comments & Feedback</h3>
+      <div id="commentsList">Loading comments...</div>
+      <div id="commentForm" class="comment-form" style="display:none">
+        <textarea id="commentInput" placeholder="Write a comment..."></textarea>
+        <button class="btn" id="sendComment">Send</button>
+      </div>
+      <div id="commentAuthNotice" class="muted">Please <a href="login.html">log in</a> to post comments.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© NotMonsterblue — Projects</div>
+  </footer>
+</body>
+</html>
